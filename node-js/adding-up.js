@@ -23,7 +23,7 @@ rl.on('line', (lineString) => {
             };
         }
         if (year === 2010) {
-            value.popu10 += popu;(
+            value.popu10 += popu;
         }
         if (year === 2015) {
             value.popu15 += popu;
