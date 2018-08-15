@@ -42,3 +42,86 @@ npmでインストールされたものの一覧を確認
 $ npm -g ls
 ```
 
+## Slackのボット
+「Hubot」を使ってSlackのボットを作成
+- [Hubot README](slack-bot/README.md)
+
+### モジュールのインストール
+```bash
+npm install -g npm
+```
+```bash
+npm install -g yo
+npm install -g generator-hubot
+npm install -g coffee-script
+```
+
+```
+$ yo hubot
+
+? ==========================================================================
+We're constantly looking for ways to make yo better!
+May we anonymously report usage statistics to improve the tool over time?
+More info: https://github.com/yeoman/insight & http://yeoman.io
+========================================================================== Yes
+                     _____________________________
+                    /                             \
+   //\              |      Extracting input for    |
+  ////\    _____    |   self-replication process   |
+ //////\  /_____\   \                             /
+ ======= |[^_/\_]|   /----------------------------
+  |   | _|___@@__|__
+  +===+/  ///     \_\
+   | |_\ /// HUBOT/\\
+   |___/\//      /  \\
+         \      /   +---+
+          \____/    |   |
+           | //|    +===+
+            \//      |xx|
+
+? Owner nonko8 <git@nonko8.com>
+? Bot name slack-bot
+? Description A simple helpful robot for your Company
+? Bot adapter slack
+   create bin\hubot
+   create bin\hubot.cmd
+   create Procfile
+   create README.md
+   create external-scripts.json
+   create hubot-scripts.json
+   create .gitignore
+   create package.json
+   create scripts\example.coffee
+   create .editorconfig
+                     _____________________________
+ _____              /                             \
+ \    \             |   Self-replication process   |
+ |    |    _____    |          complete...         |
+ |__\\|   /_____\   \     Good luck with that.    /
+   |//+  |[^_/\_]|   /----------------------------
+  |   | _|___@@__|__
+  +===+/  ///     \_\
+   | |_\ /// HUBOT/\\
+   |___/\//      /  \\
+         \      /   +---+
+          \____/    |   |
+           | //|    +===+
+            \//      |xx|
+
+npm WARN deprecated coffee-script@1.6.3: CoffeeScript on NPM has moved to "coffeescript" (no hyphen)
+npm notice created a lockfile as package-lock.json. You should commit this file.
++ hubot@3.1.1
++ hubot-redis-brain@1.0.0
++ hubot-scripts@2.17.2
++ hubot-diagnostics@1.0.0
++ hubot-help@1.0.1
++ hubot-google-translate@0.2.1
++ hubot-pugme@0.1.1
++ hubot-maps@0.0.3
++ hubot-rules@1.0.0
++ hubot-shipit@0.2.1
++ hubot-heroku-keepalive@1.0.3
++ hubot-google-images@0.2.7
+added 87 packages from 63 contributors and audited 162 packages in 13.823s
+found 0 vulnerabilities
+```
