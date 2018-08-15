@@ -5,3 +5,40 @@
 ## JavaScript / Node.js ライブラリ
 - [JavaScript標準ビルトインオブジェクト](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects)
 - [Node.js v8.11.3 Documentation](https://nodejs.org/en/blog/release/v8.11.3/)
+
+## npm
+Node.jsのためのパッケージマネージャ
+```bash
+$ npm
+
+Usage: npm <command>
+
+where <command> is one of:
+    access, adduser, bin, bugs, c, cache, completion, config,
+    ddp, dedupe, deprecate, dist-tag, docs, doctor, edit,
+    explore, get, help, help-search, i, init, install,
+    install-test, it, link, list, ln, login, logout, ls,
+    outdated, owner, pack, ping, prefix, profile, prune,
+    publish, rb, rebuild, repo, restart, root, run, run-script,
+    s, se, search, set, shrinkwrap, star, stars, start, stop, t,
+    team, test, token, tst, un, uninstall, unpublish, unstar,
+    up, update, v, version, view, whoami
+
+npm <command> -h     quick help on <command>
+npm -l           display full usage info
+npm help <term>  search for help on <term>
+npm help npm     involved overview
+
+Specify configs in the ini-formatted file:
+    /home/nonko8/.npmrc
+or on the command line via: npm <command> --key value
+Config info can be viewed via: npm help config
+
+npm@5.6.0 /home/nonko8/.nodebrew/node/v8.9.4/lib/node_modules/npm
+```
+
+npmでインストールされたものの一覧を確認
+```bash
+$ npm -g ls
+```
+
