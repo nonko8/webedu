@@ -125,3 +125,40 @@ npm notice created a lockfile as package-lock.json. You should commit this file.
 added 87 packages from 63 contributors and audited 162 packages in 13.823s
 found 0 vulnerabilities
 ```
+
+### hello.js
+
+スクリプトサンプル
+
+[hello.js](slack-bot/scripts/hello.js)
+
+実行
+```bash
+chmod a+x bin/hubot
+bin/hubot
+```
+
+```bash
+# 「hello>」と入力
+slack-bot> hello>
+# 実行結果：ボットから「Hello, Shell」と返ってくる
+slack-bot> Hello, Shell
+```
+
+### Slack App で Hubot の設定
+（Slackの登録方法は割愛）
+
+検索欄に「hubot」と入力し、検索結果に表示される「Hubot」の「インストール」ボタンをクリック。
+
+[2018-08-17_232620.png](images/2018-08-17_232620.png)
+
+TODO：Slackでの追加手順を記載
+
+
+### hubot を起動
+コンソールに次の通りに入力。
+```bash
+env HUBOT_SLACK_TOKEN=xoxb-315XXXXXXXXX-XXXXXXXXXXXX-XXXXXXXXXXXXXXXXXXXXXXzA bin/hubot --adapter slack
+```
+
+Slackのチャンネルで「hello>」と投稿して「Hello, <Slackでの名前>」と返信されれば成功。
