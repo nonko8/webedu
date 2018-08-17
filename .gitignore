@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 node_modules
 .DS_Store*
 .hubot_history
 package-lock.json
+=======
+node_module
+package-lock.json
+>>>>>>> 71e38202b586ca1af3f81b7b7b727e315c59ad02
