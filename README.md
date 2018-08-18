@@ -271,3 +271,132 @@ $ npm test
 テストが正常に完了しました
 ```
 
+### Slack との連携
+
+準備
+```bash
+$ mkdir hubot-todo
+$ cd hubot-todo/
+$ npm init
+
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help json` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install <pkg>` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+package name: (hubot-todo)
+version: (1.0.0)
+description:
+entry point: (index.js)
+test command:
+git repository:
+keywords:
+author:
+license: (ISC)
+About to write to /home/nonko8/workspaces/webedu/hubot-todo/package.json:
+
+{
+  "name": "hubot-todo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
+
+
+Is this OK? (yes) yes
+```
+```bash
+# Bot adapter を「slack」にする。そのほかはデフォルトのまま。
+$ yo hubot
+                     _____________________________
+                    /                             \
+   //\              |      Extracting input for    |
+  ////\    _____    |   self-replication process   |
+ //////\  /_____\   \                             /
+ ======= |[^_/\_]|   /----------------------------
+  |   | _|___@@__|__
+  +===+/  ///     \_\
+   | |_\ /// HUBOT/\\
+   |___/\//      /  \\
+         \      /   +---+
+          \____/    |   |
+           | //|    +===+
+            \//      |xx|
+
+? Owner nonko8 <git@nonko8.com>
+? Bot name hubot-todo
+? Description A simple helpful robot for your Company
+? Bot adapter slack
+   create bin/hubot
+   create bin/hubot.cmd
+   create Procfile
+   create README.md
+   create external-scripts.json
+   create hubot-scripts.json
+   create .gitignore
+ conflict package.json
+? Overwrite package.json? overwrite this and all others
+    force package.json
+   create scripts/example.coffee
+   create .editorconfig
+                     _____________________________
+ _____              /                             \
+ \    \             |   Self-replication process   |
+ |    |    _____    |          complete...         |
+ |__\\|   /_____\   \     Good luck with that.    /
+   |//+  |[^_/\_]|   /----------------------------
+  |   | _|___@@__|__
+  +===+/  ///     \_\
+   | |_\ /// HUBOT/\\
+   |___/\//      /  \\
+         \      /   +---+
+          \____/    |   |
+           | //|    +===+
+            \//      |xx|
+
+npm WARN deprecated coffee-script@1.6.3: CoffeeScript on NPM has moved to "coffeescript" (no hyphen)
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN hubot-slack@4.5.4 requires a peer of hubot@^2.0.0 but none is installed. You must install peer dependencies yourself.
+
++ hubot-redis-brain@1.0.0
++ hubot-scripts@2.17.2
++ hubot-heroku-keepalive@1.0.3
++ hubot@3.1.1
++ hubot-pugme@0.1.1
++ hubot-google-translate@0.2.1
++ hubot-diagnostics@1.0.0
++ hubot-rules@1.0.0
++ hubot-shipit@0.2.1
++ hubot-google-images@0.2.7
++ hubot-help@1.0.1
++ hubot-maps@0.0.3
++ hubot-slack@4.5.4
+added 151 packages from 135 contributors and audited 253 packages in 4.929s
+found 0 vulnerabilities
+```
+```bash
+$ touch scripts/todo.js
+```
+```bash
+$ npm install ../todo
+npm WARN hubot-slack@4.5.4 requires a peer of hubot@^2.0.0 but none is installed. You must install peer dependencies yourself.
+
++ todo@1.0.0
+added 1 package and audited 254 packages in 1.729s
+found 0 vulnerabilities
+```
+
+todo.jsの編集
+- [todo.js](hubot-todo/scripts/todo.js)
+
+
