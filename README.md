@@ -262,6 +262,7 @@ Is this OK? (yes) yes
 ### スクリプトの実行
 
 ```bash
+# テストスクリプトの実行
 $ npm test
 
 > todo@1.0.0 test /home/username/workspaces/webedu/todo
@@ -269,3 +270,4 @@ $ npm test
 
 テストが正常に完了しました
 ```
+
