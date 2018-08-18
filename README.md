@@ -252,3 +252,20 @@ About to write to /home/nonko8/workspaces/webedu/todo/package.json:
 
 Is this OK? (yes) yes
 ```
+
+### スクリプトサンプル
+
+スクリプト  
+- [index.js](todo/index.js)
+- [test.js](todo/test.js)
+
+### スクリプトの実行
+
+```bash
+$ npm test
+
+> todo@1.0.0 test /home/username/workspaces/webedu/todo
+> node test.js
+
+テストが正常に完了しました
+```
