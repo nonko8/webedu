@@ -56,9 +56,9 @@ npm install -g generator-hubot
 npm install -g coffee-script
 ```
 
-```
+```bash
 $ yo hubot
-
+# Bot adapter を「slack」にする。そのほかはデフォルトのまま。
 ? ==========================================================================
 We're constantly looking for ways to make yo better!
 May we anonymously report usage statistics to improve the tool over time?
@@ -126,13 +126,16 @@ added 87 packages from 63 contributors and audited 162 packages in 13.823s
 found 0 vulnerabilities
 ```
 
-### hello.js
+### スクリプトサンプル
 
-スクリプトサンプル
+機能
+1. 「Hello>」と入力すると、「Hello, ${username}」と返す
+2. 「lot>」と入力すると、「<おみくじの結果>, ${username}」と返す
 
-[hello.js](slack-bot/scripts/hello.js)
+スクリプト  
+- [hello.js](slack-bot/scripts/hello.js)
 
-実行
+### Hubot の実行
 ```bash
 chmod a+x bin/hubot
 bin/hubot
@@ -141,19 +144,54 @@ bin/hubot
 ```bash
 # 「hello>」と入力
 slack-bot> hello>
-# 実行結果：ボットから「Hello, Shell」と返ってくる
+# 実行結果：ボットから「Hello, Shell」と返ってくればOK！
 slack-bot> Hello, Shell
 ```
 
 ### Slack App で Hubot の設定
 （Slackの登録方法は割愛）
 
-検索欄に「hubot」と入力し、検索結果に表示される「Hubot」の「インストール」ボタンをクリック。
+Slackのアプリ一覧画面を開き、検索欄に「hubot」と入力し、検索結果に表示される「Hubot」の「インストール」ボタンをクリック。
 
-[2018-08-17_232620.png](images/2018-08-17_232620.png)
+![2018-08-17_232620.png](images/2018-08-17_232620.png)
 
-TODO：Slackでの追加手順を記載
+Hubotの画面が表示されたら「サインインしてインストール」をクリック。
 
+![2018-08-17_232947.png](images/2018-08-17_232947.png)
+
+ボットを追加するワークスペース名を入力し、「続行する　→」をクリック。
+
+![2018-08-17_233018.png](images/2018-08-17_233018.png)
+
+ワークスペースへサインインするために、メールアドレスとパスワードを聞かれるので、入力して「サインイン」をクリック。
+
+![2018-08-17_233046.png](images/2018-08-17_233046.png)
+
+再びHubotの画面が表示されるので、「インストール」をクリック。
+
+![2018-08-17_233118.png](images/2018-08-17_233118.png)
+
+Hubotにつける名前を聞かれるので、「ユーザー名」の欄に適当に入力して「Hubot インテグレーションの追加」をクリック。
+
+![2018-08-17_233206.png](images/2018-08-17_233206.png)
+
+すると、次のような文字列が表示されるので、どこかにコピペしておく。  
+
+![2018-08-17_233553.png](images/2018-08-17_233553.png)
+
+> これは、HubotとSlackにアクセスするために必要なもので、パスワードと同等なもの。これがないとSlack側では不正なアクセスとみなされる。(実際は調査していないので正確なことは不明、、、)  
+> 漏れてしまうと、知らない人が勝手にワークスペースにボットを潜り込ませることができてしまうため、管理は厳重にしよう。  
+> 漏れた場合は「APIトークン」の「「再作成する」で以前のキーを無効にして新しいキーを再作成することができる。
+
+コピー出来たら画面の下にある「インテグレーションの保存」をクリック。
+
+![2018-08-17_233620.png](images/2018-08-17_233620.png)
+
+保存んをすると、ワークスペースにHubotが追加される。
+
+![2018-08-17_233703.png](images/2018-08-17_233703.png)
+
+Slack での Hubot の設定は以上。
 
 ### hubot を起動
 コンソールに次の通りに入力。
@@ -161,4 +199,7 @@ TODO：Slackでの追加手順を記載
 env HUBOT_SLACK_TOKEN=xoxb-315XXXXXXXXX-XXXXXXXXXXXX-XXXXXXXXXXXXXXXXXXXXXXzA bin/hubot --adapter slack
 ```
 
+`HUBOT_SLACK_TOKEN=・・・` は、先ほどコピーしておいたAPIキー。
+
 Slackのチャンネルで「hello>」と投稿して「Hello, <Slackでの名前>」と返信されれば成功。
+
