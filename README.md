@@ -2,6 +2,8 @@
 
 勉強用のリポジトリです。
 
+---
+
 ## JavaScript / Node.js ライブラリ
 - [JavaScript標準ビルトインオブジェクト](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects)
 - [Node.js v8.11.3 Documentation](https://nodejs.org/en/blog/release/v8.11.3/)
@@ -41,6 +43,8 @@ npmでインストールされたものの一覧を確認
 ```bash
 $ npm -g ls
 ```
+
+---
 
 ## Slackのボット
 「Hubot」を使ってSlackのボットを作成
@@ -203,3 +207,48 @@ env HUBOT_SLACK_TOKEN=xoxb-315XXXXXXXXX-XXXXXXXXXXXX-XXXXXXXXXXXXXXXXXXXXXXzA bi
 
 Slackのチャンネルで「hello>」と投稿して「Hello, <Slackでの名前>」と返信されれば成功。
 
+---
+
+## 
+
+```bash
+$ mkdir todo
+$ cd todo
+$ npm init
+
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help json` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install <pkg>` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+package name: (todo)
+version: (1.0.0)
+description:
+entry point: (index.js)
+test command: node test.js
+git repository:
+keywords:
+author:
+license: (ISC)
+About to write to /home/nonko8/workspaces/webedu/todo/package.json:
+
+{
+  "name": "todo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
+
+
+Is this OK? (yes) yes
+```
