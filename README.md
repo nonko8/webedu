@@ -396,7 +396,28 @@ added 1 package and audited 254 packages in 1.729s
 found 0 vulnerabilities
 ```
 
+### ボットの動作作成
+
 todo.jsの編集
 - [todo.js](hubot-todo/scripts/todo.js)
 
+### hubot を起動
+コンソールに次の通りに入力。
+```bash
+env HUBOT_SLACK_TOKEN=xoxb-315XXXXXXXXX-XXXXXXXXXXXX-XXXXXXXXXXXXXXXXXXXXXXzA bin/hubot --adapter slack
+```
 
+### Slack から実行してみる
+
+```
+todo 鉛筆を買う
+todo ノートを買う
+list
+done ノートを買う
+donelist
+del ノートを買う
+donelist
+list
+```
+
+---
